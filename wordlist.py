@@ -9,7 +9,7 @@ colorama.init(autoreset=True)
 
 
 File_path = ''
-info = ['0','1','2','3','4','5','6','7','8','9']
+number = ['0','1','2','3','4','5','6','7','8','9']
 info_c = []
 passlen = 0
 
@@ -41,7 +41,7 @@ opt = int(input("""what type numbers you want?
 
 if(opt == 1):
     for q in range(range1):
-        info.append(input("target info\t\t-->"))
+        number.append(input("target info\t\t-->"))
         pass
 
 
@@ -64,7 +64,7 @@ op = int(input("""what type of spaces you what?
 
 if(op == 1):
     espaco =(input("What type of spaces you want ex: - _ if you want a blank space leave blank "))
-    for i in itertools.product(info,info_c, repeat=passlen):
+    for i in itertools.product(number,info_c, repeat=passlen):
         pathf.write(espaco.join(i) + "\n")
 
     print(Fore.GREEN +"all passwords generated successfully passwords generate")
@@ -72,7 +72,7 @@ if(op == 1):
 
 
 elif(op == 2):
-    for i in itertools.product(info,info_c, repeat=passlen):
+    for i in itertools.product(number,info_c, repeat=passlen):
         pathf.write("".join(i) + "\n")
         pathf.write("_".join(i) + "\n")
         pathf.write("-".join(i) + "\n")
