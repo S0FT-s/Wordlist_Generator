@@ -32,7 +32,7 @@ pathf = open(File_path, 'w')
 
 passlen = int(input("what is the maximum password length\n-->"))
 print("------------------------------------------------------")
-range1 = int(input("how many info you wnat to put? ex: 8\n-->"))
+range_pass = int(input("how many info you wnat to put? ex: 8\n-->"))
 
 opt = int(input("""what type numbers you want?
 1] customized
@@ -40,14 +40,14 @@ opt = int(input("""what type numbers you want?
 """))
 
 if(opt == 1):
-    for q in range(range1):
+    for q in range(range_pass):
         number.append(input("target info\t\t-->"))
         pass
 
 
 
 elif(opt == 2):
-    for q in range(range1):
+    for q in range(range_pass):
         info_c.append(input("target info\t\t-->"))
         pass
 
@@ -56,13 +56,13 @@ else:
     print(Fore.RED+"Invalid option")
 
 
-op = int(input("""what type of spaces you what?
+space_opt = int(input("""what type of spaces you what?
 1] customized
 2] all ex: - _ 
 """))
 
 
-if(op == 1):
+if(space_opt == 1):
     espaco =(input("What type of spaces you want ex: - _ if you want a blank space leave blank "))
     for i in itertools.product(number,info_c, repeat=passlen):
         pathf.write(espaco.join(i) + "\n")
@@ -71,7 +71,7 @@ if(op == 1):
 
 
 
-elif(op == 2):
+elif(space_opt == 2):
     for i in itertools.product(number,info_c, repeat=passlen):
         pathf.write("".join(i) + "\n")
         pathf.write("_".join(i) + "\n")
