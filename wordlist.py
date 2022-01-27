@@ -27,47 +27,47 @@ By:S0FT-s
 GitHub: https://github.com/S0FT-
 """)
 
-File_path = input("What is the path to the file where you want to save the wordlist?\n-->")
+File_path = input("[+] What is the path to the file where you want to save the wordlist?\n-->")
 pathf = open(File_path, 'w')
 
-passlen = int(input("what is the maximum password length\n-->"))
+passlen = int(input("[+] what is the maximum password length\n-->"))
 print("------------------------------------------------------")
-range_pass = int(input("how many info you wnat to put? ex: 8\n-->"))
+range_pass = int(input("[+] how many info you wnat to put? ex: 8\n-->"))
 
-opt = int(input("""what type numbers you want?
+opt = int(input("""[+] what type numbers you want?
 1] customized
 2] prefix 0 to 9
 """))
 
 if(opt == 1):
     for q in range(range_pass):
-        number.append(input("target info\t\t-->"))
+        number.append(input("[+] target info\t\t-->"))
         pass
 
 
 
 elif(opt == 2):
     for q in range(range_pass):
-        info_c.append(input("target info\t\t-->"))
+        info_c.append(input("[+] target info\t\t-->"))
         pass
 
 
 else:
-    print(Fore.RED+"Invalid option")
+    print(Fore.RED+"[+] Invalid option")
 
 
-space_opt = int(input("""what type of spaces you what?
+space_opt = int(input(""[+] "what type of spaces you what?
 1] customized
 2] all ex: - _ 
 """))
 
 
 if(space_opt == 1):
-    espaco =(input("What type of spaces you want ex: - _ if you want a blank space leave blank "))
+    espaco =(input("[+] What type of spaces you want ex: - _ if you want a blank space leave blank "))
     for i in itertools.product(number,info_c, repeat=passlen):
         pathf.write(espaco.join(i) + "\n")
 
-    print(Fore.GREEN +"all passwords generated successfully passwords generate")
+    print(Fore.GREEN +"[+] all passwords generated successfully passwords generate")
 
 
 
@@ -77,7 +77,7 @@ elif(space_opt == 2):
         pathf.write("_".join(i) + "\n")
         pathf.write("-".join(i) + "\n")
 
-    print(Fore.GREEN +"all passwords generated successfully passwords generate ")
+    print(Fore.GREEN +"[+] all passwords generated successfully passwords generate ")
 
 else:
-    print(Fore.RED+"Invalid option")
+    print(Fore.RED+"[+] Invalid option")
