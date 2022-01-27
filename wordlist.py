@@ -56,7 +56,7 @@ else:
     print(Fore.RED+"[+] Invalid option")
 
 
-space_opt = int(input(""[+] "what type of spaces you what?
+space_opt = int(input("""[+] what type of spaces you what?
 1] customized
 2] all ex: - _ 
 """))
